@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.varev.managementsystem.controller.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="Log in to continue">
+      <font>
+         <Font name="System Italic" size="16.0" />
+      </font></Label>
+   <TextField fx:id="usernameInput" maxWidth="300.0" promptText="Username">
+      <font>
+         <Font size="15.0" />
+      </font></TextField>
+   <PasswordField fx:id="passwordInput" maxWidth="300.0" promptText="Password">
+      <font>
+         <Font size="15.0" />
+      </font></PasswordField>
+    <Button fx:id="loginButton" onAction="#handleLogin" text="Submit">
+      <font>
+         <Font size="16.0" />
+      </font></Button>
+   <Label fx:id="registerLink" text="No account? Create your own!" textFill="#157ec9" underline="true">
+      <VBox.margin>
+         <Insets bottom="-20.0" />
+      </VBox.margin>
+      <font>
+         <Font size="14.0" />
+      </font>
+      <padding>
+         <Insets bottom="10.0" />
+      </padding>
+   </Label>
+   <Label fx:id="notification1" prefHeight="17.0" prefWidth="0.0" textFill="#d03636">
+      <font>
+         <Font size="14.0" />
+      </font></Label>
+</VBox>
