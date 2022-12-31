@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.varev.managementsystem.controller.RegisterController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="Create an account to continue">
+        <font>
+            <Font name="System Italic" size="16.0" />
+        </font></Label>
+    <TextField fx:id="username" maxWidth="300.0" promptText="Username">
+        <font>
+            <Font size="15.0" />
+        </font></TextField>
+   <TextField fx:id="emailAddress" maxWidth="300.0" promptText="Email address">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </TextField>
+   <ComboBox fx:id="type" maxWidth="300.0" promptText="Type" />
+    <PasswordField fx:id="password" maxWidth="300.0" promptText="Password">
+        <font>
+            <Font size="15.0" />
+        </font></PasswordField>
+   <PasswordField fx:id="passwordConfirmation" maxWidth="300.0" promptText="Confirm password">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </PasswordField>
+   <CheckBox fx:id="dataUsageAndTos" maxWidth="300.0" mnemonicParsing="false" text="I know and accept my data processing and usage.    I am familiar with terms of use." wrapText="true" />
+    <Button fx:id="registerButton" onAction="#handleRegister" text="Sign Up">
+        <font>
+            <Font size="16.0" />
+        </font></Button>
+    <Label fx:id="loginRedirection" text="Already have an account? Sign in" textFill="#157ec9" underline="true">
+        <VBox.margin>
+            <Insets bottom="-20.0" />
+        </VBox.margin>
+        <font>
+            <Font size="14.0" />
+        </font>
+        <padding>
+            <Insets bottom="10.0" />
+        </padding>
+    </Label>
+    <Label fx:id="notification" prefHeight="17.0" prefWidth="0.0" textFill="#d03636">
+        <font>
+            <Font size="14.0" />
+        </font></Label>
+</VBox>
