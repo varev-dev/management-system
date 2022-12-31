@@ -44,9 +44,19 @@ public class Main extends Application {
     }
 
     public static void changeSceneDelayed(String profile, Duration delay) {
+        profile += ".fxml";
+        Parent parent = null;
+
+        try {
+            parent = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource(profile)));
+        } catch (IOException ignore) {
+            /* TODO: Redirect to error page */
+        }
+
         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
+        Parent finalParent = parent;
         executorService.scheduleAtFixedRate(() -> {
-            changeScene(profile);
+            stage.getScene().setRoot(finalParent);
         }, delay.toMillis(), 1, TimeUnit.MILLISECONDS);
     }
 
